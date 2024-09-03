@@ -8,6 +8,7 @@ enableEmoji=true
 enableRobotsTXT=true
 pygmentsUseClasses=true
 pygmentsCodeFences=true
+ignoreLogs = ['error-remote-getjson']
 
 [params.intro]
   main = "Hi, I'm Edna :wave:"
@@ -41,9 +42,9 @@ pygmentsCodeFences=true
   portfolio = "project"
 
 [params.sidebar]
-  backgroundImage = '' # header background image - default "/images/default_sidebar.jpg" - Photo by Tim Marshall on Unsplash
+  backgroundImage = '' # header background image - default "/images/thunder.jpg" - Photo by Tim Marshall on Unsplash
   gradientOverlay = '' # default: rgba(0,0,0,0.4),rgba(0,0,0,0.4)
-  logo = "" # - default "/images/edna-west.jpg"
+  logo = "" # - default "/images/me.jpg"
 [params.assets]
   favicon = ""
   customCSS = ""
