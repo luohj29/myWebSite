@@ -88,6 +88,13 @@ pygmentsCodeFences=true
   url = "/post/"
   weight = -100
 
+[[menu.main]]
+  identifier = "project"
+  name = "Project"
+  title = "Project section"
+  url = "/project/"
+  weight = -90
+
 [sitemap]
   changefreq = "monthly"
   filename = "sitemap.xml"
