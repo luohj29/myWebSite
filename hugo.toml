@@ -1,3 +1,4 @@
+ignoreLogs = ['error-remote-getjson']
 baseURL = "https://luohj29.github.io/"
 languageCode = "en-us"
 title = "Rogers Luo"
@@ -42,9 +43,9 @@ pygmentsCodeFences=true
   portfolio = "project"
 
 [params.sidebar]
-  backgroundImage = '' # header background image - default "/images/thunder.jpg" - Photo by Tim Marshall on Unsplash
+  backgroundImage = '' # header background image - default "/images/default-sidebar.jpg" - Photo by Tim Marshall on Unsplash
   gradientOverlay = '' # default: rgba(0,0,0,0.4),rgba(0,0,0,0.4)
-  logo = "" # - default "/images/me.jpg"
+  logo = "" # - default "/images/enda-west.jpg"
 
 [params.assets]
   favicon = ""
