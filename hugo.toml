@@ -1,120 +1,86 @@
-ignoreLogs = ['error-remote-getjson']
-baseURL = "https://luohj29.github.io/"
+baseURL = "http://example.org/"
+DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "Rogers Luo"
-theme = "personal-web"
-copyright="? Rogers Luo"
-googleAnalytics = ""
-enableEmoji=true
-enableRobotsTXT=true
-pygmentsUseClasses=true
-pygmentsCodeFences=true
+title = "A Hugo Site"
+copyright = "This is a customized copyright."
+theme = "diary"
 
-
-[params.intro]
-  main = "Hi, I'm Rogers Luo"
-  sub = "I'm a student in computer science"
-
-[params.main]
-  latestPublishHeader = "My Latest Project"
-
-[taxonomies]
-  design = "designs"
-  tech = "techs"
-
-[blackfriday]
-  hrefTargetBlank = true
-
-[params]
-  breadcrumb = true
-  accentColor = "#FD3519"
-  mainSections = ['portfolio'] # values: ['post', 'portfolio'] only accept one section, to be displayed bellow 404
-  rendererSafe = false # set to true if wish to remove the unsafe renderer setting below (recommended). Titles will not be run through markdownify
-
-[params.notFound]
-  gopher = "/images/gopher.png" # checkout https://gopherize.me/
-  h1 = 'Bummer!'
-  p = "It seems that this page doesn't exist."
-
-[params.sections]
-  # Define how your sections will be called
-  # when automatically pulled. For instance in the 404 page
-  post = "article"
-  portfolio = "project"
-
-[params.sidebar]
-  backgroundImage = '' # header background image - default "/images/default-sidebar.jpg" - Photo by Tim Marshall on Unsplash
-  gradientOverlay = '' # default: rgba(0,0,0,0.4),rgba(0,0,0,0.4)
-  logo = "" # - default "/images/enda-west.jpg"
-
-[params.assets]
-  favicon = ""
-  customCSS = ""
-
-[params.social]
-  github = "https://github.com/"
-  twitter = "https://twitter.com/"
-  linkedin = "https://www.linkedin.com/in/"
-  medium = "https://medium.com/"
-  codepen = "https://codepen.io/"
-  facebook = "https://www.facebook.com/"
-  youtube = "https://www.youtube.com/"
-  instagram = "https://www.instagram.com/"
-  gitlab = "https://gitlab.com/"
-  keybase = "https://keybase.io/"
-
-[params.contact]
-  email = ""
-  text= "" # text of the contact link in the sidebar. If email params.contact.email is defined
-
-
-[menu]
-
-[[menu.main]]
-  identifier = "about"
-  name = "About"
-  title = "About section"
-  url = "/about/"
-  weight = -120
-
-[[menu.main]]
-  identifier = "portfolio"
-  name = "Portfolio"
-  title = "Portfolio"
-  url = "/portfolio/"
-  weight = -110
-
-[[menu.main]]
-  identifier = "blog"
-  name = "Post"
-  title = "Blog section"
-  url = "/post/"
-  weight = -100
-
-[[menu.main]]
-  identifier = "project"
-  name = "Project"
-  title = "Project section"
-  url = "/project/"
-  weight = -90
-
-[sitemap]
-  changefreq = "monthly"
-  filename = "sitemap.xml"
-  priority = 0.5
-
-[privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    disable = true
-    respectDoNotTrack = true
-    useSessionStorage = false
-  [privacy.twitter]
-    disable = false
-    enableDNT = true
-    simple = false
+#Google Analytics
+[services]
+  [services.googleAnalytics]
+    id = "G-XXXXXXXXXX"  # Your Google Analytics ID
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "perldoc"
+    tabWidth = 4
+
+[params]
+subtitle = "Themed by Diary."
+enableGitalk = false
+enableGiscus = true
+enableLaTeX=true
+
+# Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
+clarity = "abcdefghzd"
+
+# Twitter Card and Open Graph settings
+enableOpenGraph = true
+enableTwitterCards = true
+title = "My Blog" # will set 'og:site_name'
+description = "My HomePage Description"  # will set 'og:description'
+
+[params.gitalk]
+  owner = "user"
+  repo = "repo name"
+  client_id = "your client id"
+  client_secret = "your client secret"
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+[params.utterances]
+repo="your repo"
+term="[ENTER TERM HERE]"
+label="your label"
+theme="github-light"
+
+# Please visit https://giscus.app/ to generate settings.
+[params.giscus]
+    data-repo="luohj29/myWebSite"
+    data-repo-id="R_kgDOMsD_Kg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMsD_Ks4Ciw_g"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    crossorigin="anonymous"
+
+
+[[menu.main]]
+url = "/categories"
+name = "Categories"
+weight = 2
+[[menu.main]]
+url = "/tags"
+name = "Tags"
+weight = 3
+[[menu.main]]
+url = "/posts"
+name = "Archive"
+weight = 1
+[[menu.main]]
+url = "/index.xml"
+name = "RSS Feed"
+weight = 4
