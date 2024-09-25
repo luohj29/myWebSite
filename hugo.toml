@@ -54,10 +54,10 @@ theme="github-light"
 
 # Please visit https://giscus.app/ to generate settings.
 [params.giscus]
-    data-repo="luohj29/myWebSite"
-    data-repo-id="R_kgDOMsD_Kg"
+data-repo="luohj29/luohj29.github.io"
+    data-repo-id="R_kgDOMAVruA"
     data-category="Announcements"
-    data-category-id="DIC_kwDOMsD_Ks4Ciw_g"
+    data-category-id="DIC_kwDOMAVruM4Ciw__"
     data-mapping="pathname"
     data-strict="0"
     data-reactions-enabled="1"
